@@ -1,0 +1,9 @@
+<div>
+    <h4> {{ news.articleTitle }} </h4>
+        <p> {{news.articleContent}}</p>
+
+        <a ui-sref="news.comments({articleId: item.id})">Comment!</a>
+
+</div>
+
+<div ui-view></div>

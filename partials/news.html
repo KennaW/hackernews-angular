@@ -1,0 +1,25 @@
+
+<div ng-show="news.length">
+    <h1> Here are all of news:</h1>
+    <ul>
+        <li ng-repeat="item in news">
+            <a ui-sref="news.articleContent({articleId: item.id})">{{item.articleTitle}}</a>
+
+        </li>
+    </ul>
+</div>
+
+
+
+<div class="col-md-4">
+  <h3>Add a new article</h3>
+  <form ng-submit="NewsFactory.addNews()" class="form-inline" role="form">
+    <div class="form-group">
+      <input type="text" ng-model="NewsFactory.title" class="form-control" placeholder="Article title">
+      <input type="text" ng-model="NewsFactory.content" class-"form-control" placeholder="Article content">
+    </div>
+    <button type="submit" class="btn btn-default">Post</button>
+  </form>
+</div>
+<div ui-view></div>
+<!-- <div ui-view> </div>  -->
